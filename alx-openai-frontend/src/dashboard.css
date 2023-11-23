@@ -1,0 +1,269 @@
+.dashboard{
+      width: 100%;
+      height: 100dvh;
+      display: grid;
+      grid-template-columns: 20% 80%;
+      grid-template-areas: "sidemenu topmenu topmenu topmenu"             "sidemenu outlet outlet outlet"
+                           "sidemenu outlet outlet outlet";
+                           
+}
+
+.side-menu-bar{
+      grid-area: sidemenu;
+      background-color: #ACC8C7;
+      padding: 1rem;
+}
+
+.side-menu-bar img{
+      width: 40px;
+}
+
+.logo-dash{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      
+}
+
+.logo-dash h4{
+      margin: 0;
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      margin-left: .3rem; 
+}
+hr{
+      border-color: #7C7F86;
+      border-width: 1px;
+      border-style:solid;
+}
+
+.links{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+}
+
+.links a{
+      text-decoration: none;
+      color: #FFFFFF;
+      background-color: #469A99;
+      padding: .5rem;
+      border-radius: .3rem;
+      font-weight: 600;
+      text-transform: uppercase;
+}
+
+
+
+
+
+.top-menu-overview{
+      grid-area: topmenu;
+      min-height: 20dvh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 1rem;
+}
+
+.overview-date{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+}
+
+.overview-date h2{
+      margin: 0;
+      font-size: 1.1rem;
+      color: #1F2732;
+}
+
+.overview{
+      display: flex;
+      width: 100%;
+      gap: 1rem;
+      justify-content: space-between;
+}
+
+.overview-item{
+      background-color: #FFFFFFFF;
+      width: 100%;
+      padding: 1rem;
+      border-radius: .3rem;
+      position:relative;
+      
+}
+
+.overview-item p{
+      margin: 0;
+      color: #7C7F86;
+      font-weight: 600;
+      font-size: .8rem;
+      margin-bottom: .5rem;
+}
+.overview-item h6{
+      margin: 0;
+      color: #1F2732;
+      font-size: 1rem;
+}
+
+.overview-item small{
+      text-align: right;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-weight: 600;
+}
+
+.revenue{
+      color: #FF8200;   
+}
+
+.orders{
+      
+      color: #1F9C4B;
+}
+.refunds{
+      color: #FF3729;
+}
+
+.profits{
+      color: #FF8200;
+}
+
+.outlet-container{
+      grid-area: outlet;
+      min-height: 80dvh;
+      padding: 1rem;
+}
+
+.reports{
+
+}
+
+.report-content{
+      display: flex;
+      flex-direction: column;
+
+}
+
+.chat-box form{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 450px;
+      width: 100%;
+      position: relative;
+      margin-left: auto;
+}
+.chat-box input{
+      width: 100%;
+      padding: .8rem;
+      border-radius: 1rem;
+      outline: none;
+      background-color: #FFFFFF;
+
+}
+.submit{
+      position: absolute;
+      right: 6px;
+      top: 4px;
+      font-size: larger;
+      color: #FFFFFF;
+      padding: 7px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+}
+
+
+.submit-inactive{
+      background-color: #7C7F86;
+}
+
+.submit-active{
+      background-color: #1F9C4B;
+}
+
+.submit:hover{
+      cursor: pointer;
+}
+.chat-output{
+      width: 100%;
+      height: 60dvh;
+      border-radius: .5rem;
+      background-color: #FFFFFF;
+      margin-bottom: 1rem;
+      padding: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      position: relative;
+
+}
+
+.message{
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: 0.5rem;
+      
+}
+
+.message p{
+      font-weight: 600;
+      color: #FFFFFF;
+      padding: .2rem .5rem;
+      border-radius: .3rem;
+      margin: 0;
+      
+}
+
+.message i{
+
+}
+
+.send p{
+      background-color: #7C7F86;border-top-right-radius: 0;
+}
+
+.response{
+      flex-direction: row-reverse ;
+      align-self: flex-start;
+}
+
+.response p{
+      background-color: #1F9C4B ;border-top-left-radius: 0;
+}
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      width: 60px;
+      aspect-ratio: 2;
+      --_g: no-repeat radial-gradient(circle closest-side,#1F2732 90%,#0000);
+      background: 
+        var(--_g) 0%   50%,
+        var(--_g) 50%  50%,
+        var(--_g) 100% 50%;
+      background-size: calc(100%/3) 50%;
+      animation: l3 1s infinite linear;
+    }
+    @keyframes l3 {
+        20%{background-position:0%   0%, 50%  50%,100%  50%}
+        40%{background-position:0% 100%, 50%   0%,100%  50%}
+        60%{background-position:0%  50%, 50% 100%,100%   0%}
+        80%{background-position:0%  50%, 50%  50%,100% 100%}
+    }

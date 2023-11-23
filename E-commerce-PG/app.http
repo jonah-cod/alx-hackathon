@@ -1,0 +1,62 @@
+POST http://localhost:5500/user
+Content-Type: application/json
+
+{
+    "name": "Jonah Doe",
+    "email": "jonah@yopmail.com",
+    "phone_number": "0712345689",
+    "address": "Latitude: -1.284100 / S 1° 17' 2.76'' , Longitude: 36.815500 / E 36° 48' 55.8''",
+    "password": "12345678"
+}
+
+### GET USERS
+GET  http://localhost:5500/user
+Content-Type: application/json
+
+
+
+###############################################################
+###############################################################
+###PRODUCTS
+POST http://localhost:5500/product
+Content-Type: application/json
+
+{
+    "name": "Smart Phone",
+    "description": "Samsung",
+    "price": 60000,
+    "quantity": 50,
+    "category": "electronics",
+    "imageUrl": "https://cdn.pixabay.com/photo/2015/01/20/12/51/mobile-605422_1280.jpg"
+}
+
+
+### GET PRODUCTS
+GET  http://localhost:5500/product
+Content-Type: application/json
+
+
+
+
+###############################################################
+###############################################################
+# ORDER ROUTES
+POST http://localhost:5500/order
+Content-Type: application/json
+
+{
+    "customer_id": "463df8b6-d3d1-47ca-baaa-91e8f7acdc2f", 
+    "product_id": "6a848b08-f4c9-49b9-99ca-dff37d314959", 
+    "shipping_to": "nyeri",
+    "quantity": 5, 
+    "unit_price": 500
+}
+
+
+### GET ORDERS
+GET  http://localhost:5500/order
+Content-Type: application/json
+
+
+### GET ORDER DETAILS
+GET  http://localhost:5500/order/96f561b3-bd90-456c-b1f6-6c6885a19a83
