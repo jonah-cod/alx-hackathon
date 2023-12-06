@@ -3,14 +3,14 @@ import axios from "axios";
 
 export const addPrompt = createAsyncThunk("prompts/send", async(message, thunkApi)=>{
       let results = await axios.get(`http://127.0.0.1:8000/prompt/${message}`);
-      console.log(results)
+      return results.data.result.output;
 })
 const messages = createSlice({
       name: "messages",
       initialState:{
             loading: false,
             error: null,
-            messages: [{type: "response", message: "response"}]
+            messages: []
       },
       reducers: {
             addPromptMessage: (state, {payload})=>{

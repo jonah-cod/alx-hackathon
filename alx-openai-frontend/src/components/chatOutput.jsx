@@ -15,6 +15,7 @@ const ChatOutput = () => {
 					<i className={`far ${message.type === "send"? "fa-user" : "fa-robot"}`}></i>
 				</div>
 			))}
+			
 
             {loading? <Loader/>: ""}
 		</div>

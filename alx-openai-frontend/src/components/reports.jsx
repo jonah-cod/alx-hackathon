@@ -22,9 +22,9 @@ const Reports = () => {
       const handleSubmit = (e) => {
             e.preventDefault()
             dispatch(addPromptMessage({type: "send", message: prompt}))
-            // dispatch(addPrompt(prompt))
+            dispatch(addPrompt(prompt))
 
-            // setPrompt("")
+            setPrompt("")
       }
       return (
             <div className='reports'>

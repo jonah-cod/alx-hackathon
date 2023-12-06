@@ -25,7 +25,6 @@ SECRET_KEY = "django-insecure-$h=bliu&^+#x!u96w7y*4o0zi@2r$_pudw=3i#tm27(^1n0*1*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -40,7 +39,9 @@ INSTALLED_APPS = [
     "ecom_LLM",
     "corsheaders"
 ]
-CORS_ORIGIN_ALLOW_ALL = True
+
+
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -50,7 +51,17 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000'
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+
 
 ROOT_URLCONF = "ecom_LLM.urls"
 
